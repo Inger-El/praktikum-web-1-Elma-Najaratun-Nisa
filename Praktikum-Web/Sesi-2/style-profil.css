@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0f172a;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Dekorasi cahaya halus di belakang */
+.background-decor {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(251, 191, 36, 0.05) 0%, rgba(15, 23, 42, 0) 70%);
+    z-index: 0;
+}
+
+.profile-card {
+    background: rgba(30, 41, 59, 0.7);
+    width: 380px;
+    padding: 40px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    z-index: 1;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Efek saat kartu disentuh kursor */
+.profile-card:hover {
+    transform: translateY(-10px);
+    border: 1px solid rgba(251, 191, 36, 0.4);
+    box-shadow: 0 0 40px rgba(251, 191, 36, 0.1), 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Bingkai foto dengan animasi bergerak pelan */
+.photo-container {
+    width: 125px;
+    height: 125px;
+    margin: 0 auto 25px;
+    border: 3px solid #fbbf24;
+    overflow: hidden;
+    animation: morphing 8s ease-in-out infinite;
+}
+
+@keyframes morphing {
+    0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+    50% { border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; }
+    100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name {
+    font-family: 'Playfair Display', serif;
+    color: #f8fafc;
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.npm {
+    color: #94a3b8;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.major {
+    color: #fbbf24;
+    font-weight: 600;
+    margin-top: 12px;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
+
+.divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(251, 191, 36, 0.4), transparent);
+    margin: 25px 0;
+}
+
+.hobby-section span {
+    color: #64748b;
+    font-size: 11px;
+    display: block;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.hobby-text {
+    color: #e2e8f0;
+    font-weight: 500;
+}
+
+.description {
+    margin-top: 20px;
+    color: #94a3b8;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.btn {
+    margin-top: 30px;
+    background: transparent;
+    border: 1px solid #fbbf24;
+    color: #fbbf24;
+    padding: 12px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #fbbf24;
+    color: #0f172a;
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.4);
+}
